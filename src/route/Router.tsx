@@ -3,7 +3,7 @@ import Login from '../components/auth/login';
 import Registration from '../components/auth/register';
 import Home from '../components/home/Home';
 
-const Router = () => {
+const Router = (): JSX.Element => {
     return (
         <>
             <Switch>
