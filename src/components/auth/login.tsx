@@ -4,7 +4,7 @@ import TextField from '../share/components/InputField'
 
 const Login = () => {
     const [loginForm, setLoginForm] = useState<Login>({
-        email: '',
+        email: "",
         password: '',
     })
     const submit = () => {
@@ -14,7 +14,7 @@ const Login = () => {
         <>
             <form onSubmit={submit}>
                 <div className="d-flex justify-content-center mt-4">
-                    <div className="flex-column ">
+                    <div className="flex-column">
                         <div>
                             <TextField
                                 value={loginForm.email}
