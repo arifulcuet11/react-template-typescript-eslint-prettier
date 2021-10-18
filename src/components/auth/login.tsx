@@ -11,14 +11,13 @@ const Login = (): JSX.Element => {
     const [emailError, setEmailError] = useState<string | null>(null);
     const submit = (e: React.FormEvent): void => {
         e.preventDefault();
-        if (
-            !validator.isEmail(loginForm.email)) {
+        if (!validator.isEmail(loginForm.email)) {
             setEmailError('Enter valid Email!');
             return;
         }
         debugger;
-        authService.login(loginForm, (res: any) =>{
-        console.log(res);
+        authService.login(loginForm, (res: any) => {
+            console.log(res);
         });
     };
     return (
