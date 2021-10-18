@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 type InputElement = HTMLInputElement | HTMLTextAreaElement
 type InputChangeEvent = React.ChangeEvent<InputElement>
 
@@ -14,7 +14,7 @@ interface TextFieldProps {
 
 const TextField = React.forwardRef<InputElement, TextFieldProps>(
     ({ onChange, textarea = false, ...rest }, ref) => {
-        const InputElement = textarea ? 'textarea' : 'input'
+        const InputElement = textarea ? 'textarea' : 'input';
         return (
             <InputElement
                 ref={ref as any}
@@ -26,8 +26,8 @@ const TextField = React.forwardRef<InputElement, TextFieldProps>(
                 }
                 {...rest}
             />
-        )
+        );
     }
-)
-TextField.displayName = 'TextField'
-export default TextField
+);
+TextField.displayName = 'TextField';
+export default TextField;

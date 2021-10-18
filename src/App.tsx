@@ -1,7 +1,7 @@
-import './App.css'
-import Router from './route/Router'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Layout from './components/layout/Layout'
+import './App.css';
+import Router from './route/Router';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Layout from './components/layout/Layout';
 function App() {
     return (
         <Layout>
@@ -9,7 +9,7 @@ function App() {
                 <Router />
             </main>
         </Layout>
-    )
+    );
 }
 
-export default App
+export default App;

@@ -1,7 +1,7 @@
-import { Route, Switch } from 'react-router'
-import Login from '../components/auth/login'
-import Registration from '../components/auth/register'
-import Home from '../components/home/Home'
+import { Route, Switch } from 'react-router';
+import Login from '../components/auth/login';
+import Registration from '../components/auth/register';
+import Home from '../components/home/Home';
 
 const Router = () => {
     return (
@@ -12,6 +12,6 @@ const Router = () => {
                 <Route path="/auth/login" component={Login} />
             </Switch>
         </>
-    )
-}
-export default Router
+    );
+};
+export default Router;

@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import Button from '../share/components/CustomButton'
-import TextField from '../share/components/InputField'
+import { useState } from 'react';
+import Button from '../share/components/CustomButton';
+import TextField from '../share/components/InputField';
 
 const Login = () => {
     const [loginForm, setLoginForm] = useState<Login>({
-        email: "",
+        email: '',
         password: '',
-    })
+    });
     const submit = () => {
-        console.log(loginForm)
-    }
+        console.log(loginForm);
+    };
     return (
         <>
             <form onSubmit={submit}>
@@ -23,7 +23,7 @@ const Login = () => {
                                     setLoginForm({
                                         ...loginForm,
                                         email: val,
-                                    })
+                                    });
                                 }}
                             />
                         </div>
@@ -35,7 +35,7 @@ const Login = () => {
                                     setLoginForm({
                                         ...loginForm,
                                         password: val,
-                                    })
+                                    });
                                 }}
                             />
                         </div>
@@ -51,6 +51,6 @@ const Login = () => {
                 </div>
             </form>
         </>
-    )
-}
-export default Login
+    );
+};
+export default Login;

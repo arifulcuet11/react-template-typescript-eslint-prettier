@@ -1,5 +1,5 @@
-import React from 'react'
-import '../../../styles/customs/custom-button.css'
+import React from 'react';
+import '../../../styles/customs/custom-button.css';
 interface ButtonProps {
     children?: React.ReactNode
     onClick?: () => void
@@ -16,6 +16,6 @@ const Button: React.FC<ButtonProps> = ({
     <button onClick={onClick} className={className} type={type}>
         {children}
     </button>
-)
+);
 
-export default Button
+export default Button;

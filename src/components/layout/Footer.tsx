@@ -55,6 +55,6 @@ const Footer = (): JSX.Element => (
             <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
         </div>
     </footer>
-)
+);
 
-export default Footer
+export default Footer;
