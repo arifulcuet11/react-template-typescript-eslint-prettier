@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiInstance = axios.create({
-    baseURL: 'https://localhost:5001',
+    baseURL: 'https://localhost:5001/api',
     // timeout: 3600,
     headers: {
         'X-Custom-Header': 'Dea project',

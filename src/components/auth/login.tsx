@@ -3,8 +3,16 @@ import validator from 'validator';
 import Button from '../share/components/CustomButton';
 import TextField from '../share/components/InputField';
 import * as authService from '../../services/auth.service';
+import { User, LoginRequest } from './auth';
+import { useHistory } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
+import { actionCreators } from '../../store';
+import { useDispatch } from 'react-redux';
 const Login = (): JSX.Element => {
-    const [loginForm, setLoginForm] = useState<Login>({
+    const history = useHistory();
+    const dispatch = useDispatch();
+    const { AddToken } = bindActionCreators(actionCreators, dispatch);
+    const [loginForm, setLoginForm] = useState<LoginRequest>({
         email: '',
         password: '',
     });
@@ -15,9 +23,9 @@ const Login = (): JSX.Element => {
             setEmailError('Enter valid Email!');
             return;
         }
-        debugger;
-        authService.login(loginForm, (res: any) => {
-            console.log(res);
+        authService.login(loginForm, (res: User) => {
+            AddToken(res.jwtToken);
+            history.push('/');
         });
     };
     return (

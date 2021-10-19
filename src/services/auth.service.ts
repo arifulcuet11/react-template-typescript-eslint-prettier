@@ -1,9 +1,11 @@
+import { LoginRequest } from '../components/auth/auth';
 import apiInstance from '../helpers/api.interceptor';
 
-export const login = (model: Login, cb: any): void => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const login = (model: LoginRequest, cb: any): void => {
     apiInstance.post('/Users/authenticate', model).then(
         (res) => {
-            cb(res);
+            cb(res.data);
         },
         (err) => {
             console.log(err);
